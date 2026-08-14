@@ -3,23 +3,34 @@ import { MdEmail } from "react-icons/md";
 
 export default function Home() {
   return (
-    <main className="min-h-screen max-w-3xl mx-auto px-6 py-12">
+    <main id="home" className="min-h-screen max-w-3xl mx-auto px-6 py-12">
       <nav className="mb-20 flex justify-between text-sm">
+        <a href="#home" className="font-medium">
+          austin
+        </a>
         <div className="flex gap-4">
-          <a href="#home" className="text-gray-600 hover:text-black">home</a>
-          <a href="#about" className="text-gray-600 hover:text-black">about</a>
-          <a href="#projects" className="text-gray-600 hover:text-black">projects</a>
-          <a href="#interests" className="text-gray-600 hover:text-black">interests</a>
+          <a href="#about" className="text-gray-600 hover:text-black">
+            about
+          </a>
+          <a href="#projects" className="text-gray-600 hover:text-black">
+            projects
+          </a>
+          <a href="#interests" className="text-gray-600 hover:text-black">
+            interests
+          </a>
         </div>
       </nav>
       <h1 className="text-5xl font-bold tracking-tight">hi, i'm austin</h1>
-      <p className="mt-4 text-lg text-gray-600">final year software engineering student</p>
+      <p className="mt-4 text-lg text-gray-600">
+        final year software engineering student
+      </p>
       <div className="mt-6 flex gap-4">
         <a
           href="https://github.com/auscodes"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
+          className="text-gray-600 transition hover:text-black"
         >
           <FaGithub size={24} />
         </a>
@@ -28,10 +39,15 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
+          className="text-gray-600 transition hover:text-black"
         >
           <FaLinkedin size={24} />
         </a>
-        <a href="mailto:limchunyik6868@gmail.com" aria-label="Email">
+        <a
+          href="mailto:limchunyik6868@gmail.com"
+          aria-label="Email"
+          className="text-gray-600 transition hover:text-black"
+        >
           <MdEmail size={24} />
         </a>
       </div>
