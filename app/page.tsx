@@ -3,7 +3,7 @@ export default function Home() {
     <main className="min-h-screen max-w-3xl mx-auto px-6 py-12">
       <h1 className="text-5xl font-bold tracking-tight">hi, i'm austin</h1>
       <p className="mt-4 text-lg text-gray-600">
-        i'm an aspiring software engineer in singapore.
+        learning swe
       </p>
       <div className="mt-6 flex gap-4">
         <a
@@ -23,14 +23,21 @@ export default function Home() {
         <a href="mailto:limchunyik6868@gmail.com">mail</a>
       </div>
 
+      <section id="about" className="mt-16">
+        <h2 className="text-2xl font-semibold">about</h2>
+        <p className="mt-2 text-gray-600">
+          final year swe student
+        </p>
+      </section>
+
       <section id="projects" className="mt-16">
         <h2>projects</h2>
-        <p>coming soon</p>
+        <p className="mt-2 text-gray-600">coming soon</p>
       </section>
 
       <section id="interests" className="mt-16">
         <h2>interests</h2>
-        <p>coming soon</p>
+        <p className="mt-2 text-gray-600">coming soon</p>
       </section>
     </main>
   );
