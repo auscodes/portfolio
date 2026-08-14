@@ -57,30 +57,6 @@ export default function Home() {
             email ↗
           </a>
         </div>
-
-        <section id="about" className="mt-10 border-t border-[#d8d4cb] pt-6">
-          <h2 className="font-mono text-sm font-medium uppercase tracking-wider text-gray-500">
-            about
-          </h2>
-          <p className="mt-1 text-gray-600">coming soon</p>
-        </section>
-
-        <section id="projects" className="mt-10 border-t border-[#d8d4cb] pt-6">
-          <h2 className="font-mono text-sm font-medium uppercase tracking-wider text-gray-500">
-            projects
-          </h2>
-          <p className="mt-1 text-gray-600">coming soon</p>
-        </section>
-
-        <section
-          id="interests"
-          className="mt-10 border-t border-[#d8d4cb] pt-6"
-        >
-          <h2 className="font-mono text-sm font-medium uppercase tracking-wider text-gray-500">
-            interests
-          </h2>
-          <p className="mt-1 text-gray-600">coming soon</p>
-        </section>
       </main>
     </div>
   );
