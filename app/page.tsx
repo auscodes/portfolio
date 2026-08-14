@@ -1,18 +1,13 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-
 export default function Home() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-white">
-      <div className="absolute -top-32 right-0 h-72 w-72 rounded-full bg-blue-200/40 blur-3xl animate-pulse" />
-
+    <div className="min-h-screen bg-[#f4f1ea]">
       <main
         id="home"
-        className="relative min-h-screen max-w-2xl mx-auto px-6 py-8 text-base"
+        className="relative min-h-screen max-w-3xl mx-auto px-6 py-8 text-base"
       >
-        <nav className="mb-12 flex justify-between text-sm">
-          <a href="#home" className="font-medium">
-            tin
+        <nav className="mb-12 flex justify-between font-mono text-xs tracking-wide">
+          <a href="#home" className="font-mono text-xs tracking-wide">
+            tin / 001
           </a>
 
           <div className="flex gap-4">
@@ -28,56 +23,62 @@ export default function Home() {
           </div>
         </nav>
 
-        <h1 className="text-3xl font-semibold tracking-tight">
-          hi, i'm austin.
+        <h1 className="text-5xl font-semibold leading-none tracking-tight sm:text-6xl">
+          hi, i&apos;m austin.
         </h1>
 
-        <p className="mt-2 text-gray-600">
+        <p className="mt-2 font-mono text-sm tracking-wide text-gray-600">
           software engineering @ smu
         </p>
 
-        <div className="mt-4 flex gap-3">
+        <div className="mt-4 flex gap-4 font-mono text-xs tracking-wide">
           <a
             href="https://github.com/auscodes"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub"
             className="text-gray-600 transition hover:text-black"
           >
-            <FaGithub size={20} />
+            github ↗
           </a>
 
           <a
             href="https://www.linkedin.com/in/limchunyik/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn"
             className="text-gray-600 transition hover:text-black"
           >
-            <FaLinkedin size={20} />
+            linkedin ↗
           </a>
 
           <a
             href="mailto:limchunyik6868@gmail.com"
-            aria-label="Email"
             className="text-gray-600 transition hover:text-black"
           >
-            <MdEmail size={20} />
+            email ↗
           </a>
         </div>
 
-        <section id="about" className="mt-10">
-          <h2 className="text-lg font-semibold">about</h2>
+        <section id="about" className="mt-10 border-t border-[#d8d4cb] pt-6">
+          <h2 className="font-mono text-sm font-medium uppercase tracking-wider text-gray-500">
+            about
+          </h2>
           <p className="mt-1 text-gray-600">coming soon</p>
         </section>
 
-        <section id="projects" className="mt-10">
-          <h2 className="text-lg font-semibold">projects</h2>
+        <section id="projects" className="mt-10 border-t border-[#d8d4cb] pt-6">
+          <h2 className="font-mono text-sm font-medium uppercase tracking-wider text-gray-500">
+            projects
+          </h2>
           <p className="mt-1 text-gray-600">coming soon</p>
         </section>
 
-        <section id="interests" className="mt-10">
-          <h2 className="text-lg font-semibold">interests</h2>
+        <section
+          id="interests"
+          className="mt-10 border-t border-[#d8d4cb] pt-6"
+        >
+          <h2 className="font-mono text-sm font-medium uppercase tracking-wider text-gray-500">
+            interests
+          </h2>
           <p className="mt-1 text-gray-600">coming soon</p>
         </section>
       </main>
