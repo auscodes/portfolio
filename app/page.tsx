@@ -33,7 +33,7 @@ export default function Home() {
         </h1>
 
         <p className="mt-2 text-gray-600">
-          final year software engineering student @ smu
+          software engineering @ smu
         </p>
 
         <div className="mt-4 flex gap-3">
@@ -68,7 +68,7 @@ export default function Home() {
 
         <section id="about" className="mt-10">
           <h2 className="text-lg font-semibold">about</h2>
-          <p className="mt-1 text-gray-600">final year swe student</p>
+          <p className="mt-1 text-gray-600">coming soon</p>
         </section>
 
         <section id="projects" className="mt-10">
