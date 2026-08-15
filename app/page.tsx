@@ -163,6 +163,11 @@ export default function Home() {
             </ul>
           </nav>
         </div>
+
+        <footer className="flex flex-wrap justify-between gap-2 pt-8 font-mono text-[0.6875rem] tracking-wide text-gray-500">
+          <span>© {new Date().getFullYear()} austin</span>
+          <span>end / 001</span>
+        </footer>
       </main>
     </div>
   );
