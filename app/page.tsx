@@ -9,18 +9,6 @@ export default function Home() {
           <a href="#home" className="font-mono text-xs tracking-wide">
             tin / 001
           </a>
-
-          <div className="flex gap-4">
-            <a href="#about" className="text-gray-600 hover:text-black">
-              about
-            </a>
-            <a href="#projects" className="text-gray-600 hover:text-black">
-              projects
-            </a>
-            <a href="#interests" className="text-gray-600 hover:text-black">
-              interests
-            </a>
-          </div>
         </nav>
 
         <h1 className="text-5xl font-semibold leading-none tracking-tight sm:text-6xl">
