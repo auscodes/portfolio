@@ -57,6 +57,13 @@ export default function Home() {
             email ↗
           </a>
         </div>
+        <p className="mt-8 flex items-center font-mono text-sm text-gray-600">
+          <span
+            className="mr-2 h-1.5 w-1.5 rounded-full bg-[#3157ff]"
+            aria-hidden="true"
+          />
+          currently: building this website
+        </p>
       </main>
     </div>
   );
