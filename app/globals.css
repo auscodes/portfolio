@@ -1,10 +1,48 @@
 @import "tailwindcss";
 
+:root {
+  --paper: #f4f1ea;
+  --ink: #000000;
+  --muted-strong: #4b5563;
+  --muted: #6b7280;
+  --rule: #d8d4cb;
+  --accent: #3157ff;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted-strong: var(--muted-strong);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+.quiet-link {
+  position: relative;
+  border-radius: 0.125rem;
+  outline: none;
+}
+
+.quiet-link::after {
+  position: absolute;
+  inset: -1rem -0.5rem;
+  content: "";
+}
+
+.quiet-link:focus-visible {
+  color: var(--accent);
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 
 .map-path {
