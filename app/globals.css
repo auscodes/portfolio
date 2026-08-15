@@ -6,3 +6,104 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+
+.map-path {
+  opacity: 1;
+  transition: opacity 220ms ease;
+}
+
+.map-route {
+  opacity: 0;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition:
+    opacity 80ms ease,
+    stroke-dashoffset 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.map-traveller {
+  transition:
+    left 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    top 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.map-node {
+  transition: opacity 220ms ease;
+}
+
+.node-preview {
+  transition:
+    opacity 180ms ease 80ms,
+    transform 180ms ease 80ms;
+}
+
+@media (min-width: 64rem) {
+  .node-preview {
+    opacity: 0;
+    transform: translateY(0.25rem);
+  }
+
+  .explore-map:has([data-node]:hover) .map-path,
+  .explore-map:has([data-node]:focus-within) .map-path {
+    opacity: 0.3;
+  }
+
+  .explore-map:has([data-node]:hover) .map-node,
+  .explore-map:has([data-node]:focus-within) .map-node {
+    opacity: 0.35;
+  }
+}
+
+.explore-map:has([data-node="01"]:hover) [data-node="01"],
+.explore-map:has([data-node="01"]:focus-within) [data-node="01"],
+.explore-map:has([data-node="02"]:hover) [data-node="02"],
+.explore-map:has([data-node="02"]:focus-within) [data-node="02"],
+.explore-map:has([data-node="03"]:hover) [data-node="03"],
+.explore-map:has([data-node="03"]:focus-within) [data-node="03"],
+.explore-map:has([data-node="01"]:hover) [data-node="01"] .node-preview,
+.explore-map:has([data-node="01"]:focus-within) [data-node="01"] .node-preview,
+.explore-map:has([data-node="02"]:hover) [data-node="02"] .node-preview,
+.explore-map:has([data-node="02"]:focus-within) [data-node="02"] .node-preview,
+.explore-map:has([data-node="03"]:hover) [data-node="03"] .node-preview,
+.explore-map:has([data-node="03"]:focus-within) [data-node="03"] .node-preview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.explore-map:has([data-node="01"]:hover) [data-route="01"],
+.explore-map:has([data-node="01"]:focus-within) [data-route="01"],
+.explore-map:has([data-node="02"]:hover) [data-route="02"],
+.explore-map:has([data-node="02"]:focus-within) [data-route="02"],
+.explore-map:has([data-node="03"]:hover) [data-route="03"],
+.explore-map:has([data-node="03"]:focus-within) [data-route="03"] {
+  opacity: 1;
+  stroke-dashoffset: 0;
+}
+
+.explore-map:has([data-node="01"]:hover) .map-traveller,
+.explore-map:has([data-node="01"]:focus-within) .map-traveller {
+  left: 50%;
+  top: 15%;
+}
+
+.explore-map:has([data-node="02"]:hover) .map-traveller,
+.explore-map:has([data-node="02"]:focus-within) .map-traveller {
+  left: 32%;
+  top: 46%;
+}
+
+.explore-map:has([data-node="03"]:hover) .map-traveller,
+.explore-map:has([data-node="03"]:focus-within) .map-traveller {
+  left: 47%;
+  top: 80%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map-path,
+  .map-route,
+  .map-traveller,
+  .map-node,
+  .node-preview {
+    transition: none;
+  }
+}
