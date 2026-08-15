@@ -1,3 +1,24 @@
+const homeItems = [
+  {
+    number: "01",
+    label: "about",
+    href: "/about",
+    preview: "little more about me",
+  },
+  {
+    number: "02",
+    label: "interests",
+    href: "/interests",
+    preview: "speedcubing, music, games",
+  },
+  {
+    number: "03",
+    label: "contact",
+    href: "mailto:limchunyik6868@gmail.com",
+    preview: "say hello!",
+  },
+] as const;
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#f4f1ea]">
@@ -59,10 +80,32 @@ export default function Home() {
             </p>
           </section>
 
-          <div
-            className="hidden min-h-80 md:block"
-            aria-hidden="true"
-          />
+          <nav aria-label="explore">
+            <ul className="grid gap-6 md:min-h-80 md:content-between">
+              {homeItems.map((item) => (
+                <li
+                  key={item.number}
+                  className="grid grid-cols-[2rem_minmax(0,1fr)] gap-x-3"
+                >
+                  <span className="pt-1 font-mono text-xs text-gray-500">
+                    {item.number}
+                  </span>
+
+                  <div>
+                    <a
+                      href={item.href}
+                      className="text-xl font-medium tracking-tight text-black"
+                    >
+                      {item.label}
+                    </a>
+                    <p className="mt-1 max-w-xs text-sm leading-relaxed text-gray-600">
+                      {item.preview}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </main>
     </div>
