@@ -51,7 +51,7 @@ export default function Home() {
             </h1>
 
             <p className="mt-2 font-mono text-sm tracking-wide text-muted-strong">
-              software engineering @ smu
+              developer & student
             </p>
 
             <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 font-mono text-xs tracking-wide">
