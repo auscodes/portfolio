@@ -6,9 +6,20 @@ import "../styles/global.css";
 interface Props {
   title: string;
   description: string;
+  markHref: string;
+  markLabel: string;
+  markAriaLabel?: string;
+  mainId?: string;
 }
 
-const { title, description } = Astro.props;
+const {
+  title,
+  description,
+  markHref,
+  markLabel,
+  markAriaLabel,
+  mainId,
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -20,6 +31,26 @@ const { title, description } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="flex min-h-full flex-col">
-    <slot />
+    <div class="min-h-screen bg-paper text-ink">
+      <main
+        id={mainId}
+        class="mx-auto flex min-h-dvh max-w-6xl flex-col px-6 py-8 text-base sm:px-8 lg:px-12"
+      >
+        <nav class="flex justify-between font-mono text-xs tracking-wide">
+          <a href={markHref} aria-label={markAriaLabel} class="quiet-link">
+            {markLabel}
+          </a>
+        </nav>
+
+        <slot />
+
+        <footer
+          class="flex flex-wrap justify-between gap-2 pt-8 font-mono text-xs tracking-wide text-muted"
+        >
+          <span>© {new Date().getFullYear()} austin</span>
+          <span>end</span>
+        </footer>
+      </main>
+    </div>
   </body>
 </html>

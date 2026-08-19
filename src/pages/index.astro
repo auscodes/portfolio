@@ -1,6 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Footer from "../components/Footer.astro";
+
+const socialLinks = [
+  {
+    label: "github",
+    href: "https://github.com/auscodes",
+    external: true,
+  },
+  {
+    label: "linkedin",
+    href: "https://www.linkedin.com/in/limchunyik/",
+    external: true,
+  },
+  {
+    label: "email",
+    href: "mailto:limchunyik6868@gmail.com",
+    external: false,
+  },
+] as const;
 
 const homeItems = [
   {
@@ -30,21 +47,16 @@ const homeItems = [
 ] as const;
 ---
 
-<Layout title="austin" description="austin's portfolio">
-  <div class="min-h-screen bg-paper text-ink">
-    <main
-      id="home"
-      class="mx-auto flex min-h-dvh max-w-6xl flex-col px-6 py-8 text-base sm:px-8 lg:px-12"
-    >
-      <nav class="flex justify-between font-mono text-xs tracking-wide">
-        <a href="#home" class="quiet-link font-mono text-xs tracking-wide">
-          tin
-        </a>
-      </nav>
-
-      <div
-        class="grid flex-1 content-start gap-12 pb-12 pt-14 lg:grid-cols-[minmax(0,0.9fr)_minmax(18rem,1.1fr)] lg:gap-16"
-      >
+<Layout
+  title="austin"
+  description="austin's portfolio"
+  markHref="#home"
+  markLabel="tin"
+  mainId="home"
+>
+  <div
+    class="grid flex-1 content-start gap-12 pb-12 pt-14 lg:grid-cols-[minmax(0,0.9fr)_minmax(18rem,1.1fr)] lg:gap-16"
+  >
         <section aria-labelledby="intro-heading" class="max-w-2xl">
           <h1
             id="intro-heading"
@@ -60,30 +72,18 @@ const homeItems = [
           <div
             class="mt-4 flex flex-wrap gap-x-4 gap-y-2 font-mono text-xs tracking-wide"
           >
-            <a
-              href="https://github.com/auscodes"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="quiet-link text-muted-strong transition-colors hover:text-ink"
-            >
-              github ↗
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/limchunyik/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="quiet-link text-muted-strong transition-colors hover:text-ink"
-            >
-              linkedin ↗
-            </a>
-
-            <a
-              href="mailto:limchunyik6868@gmail.com"
-              class="quiet-link text-muted-strong transition-colors hover:text-ink"
-            >
-              email ↗
-            </a>
+            {
+              socialLinks.map((link) => (
+                <a
+                  href={link.href}
+                  target={link.external ? "_blank" : undefined}
+                  rel={link.external ? "noopener noreferrer" : undefined}
+                  class="quiet-link text-muted-strong transition-colors hover:text-ink"
+                >
+                  {link.label} ↗
+                </a>
+              ))
+            }
           </div>
 
           <p class="mt-8 flex items-center font-mono text-sm text-muted-strong">
@@ -166,9 +166,5 @@ const homeItems = [
             }
           </ul>
         </nav>
-      </div>
-
-      <Footer />
-    </main>
   </div>
 </Layout>
